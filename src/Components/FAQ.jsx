@@ -56,7 +56,7 @@ const FAQ = () => {
       <Container sx={{ maxWidth: "760px !important" }}>
         <Typography
           sx={{
-            color: "#000339",
+            color: "#d6d2cd",
             fontSize: "35px",
             fontWeight: "bold",
             textAlign: "center",
@@ -65,7 +65,7 @@ const FAQ = () => {
           Frequently asked questions
         </Typography>
         <Typography
-          sx={{ color: "#5A6473", fontSize: "16px", mt: 1, textAlign: "center" }}
+          sx={{ color: "#a7a094", fontSize: "16px", mt: 1, textAlign: "center" }}
         >
           Everything learners usually ask before booking their first lesson.
         </Typography>
@@ -80,23 +80,24 @@ const FAQ = () => {
                 borderRadius: "10px !important",
                 overflow: "hidden",
                 boxShadow: "none",
-                border: "1px solid #E3E9F2",
+                border: "1px solid #24354e",
+                backgroundColor: "#181a1b",
                 "&:before": { display: "none" },
               }}
             >
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#17275F" }} />}
+                expandIcon={<ExpandMoreIcon sx={{ color: "#9dbee7" }} />}
                 sx={{
-                  backgroundColor: "#F5FAFE",
+                  backgroundColor: "#1b1d1e",
                   "& .MuiAccordionSummary-content": { my: 1.5 },
                 }}
               >
-                <Typography sx={{ fontWeight: "700", fontSize: "16px", color: "#000339" }}>
+                <Typography sx={{ fontWeight: "700", fontSize: "16px", color: "#d6d2cd" }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
-              <AccordionDetails sx={{ backgroundColor: "#fff", py: 2 }}>
-                <Typography sx={{ color: "#5A6473", fontSize: "15px", lineHeight: "24px" }}>
+              <AccordionDetails sx={{ backgroundColor: "#181a1b", py: 2 }}>
+                <Typography sx={{ color: "#a7a094", fontSize: "15px", lineHeight: "24px" }}>
                   {faq.answer}
                 </Typography>
               </AccordionDetails>

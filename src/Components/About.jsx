@@ -29,7 +29,7 @@ const About = () => {
 
   const LargeText = styled(Typography)(({ theme }) => ({
     fontSize: "64px",
-    color: "#000",
+    color: "#e8e6e3",
     fontWeight: "700",
     [theme.breakpoints.down("md")]: {
       fontSize: "32px",
@@ -38,7 +38,7 @@ const About = () => {
 
   const SmallText = styled(Typography)(({ theme }) => ({
     fontSize: "18px",
-    color: "#7B8087",
+    color: "#989082",
     fontWeight: "500",
     [theme.breakpoints.down("md")]: {
       fontSize: "14px",
@@ -59,7 +59,7 @@ const About = () => {
   const Divider = styled("div")(({ theme }) => ({
     width: "13%",
     height: "5px",
-    backgroundColor: "#000339",
+    backgroundColor: "#00022e",
     [theme.breakpoints.down("md")]: {
       marginLeft: "auto",
       marginRight: "auto",
@@ -90,7 +90,7 @@ const About = () => {
             <Typography
               sx={{
                 fontSize: "35px",
-                color: "#000339",
+                color: "#d6d2cd",
                 fontWeight: "700",
                 my: 3,
               }}
@@ -101,7 +101,7 @@ const About = () => {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "#5A6473",
+                color: "#a7a094",
                 lineHeight: "27px",
               }}
             >
@@ -131,7 +131,7 @@ const About = () => {
             </Box>
           ))}
         </TextFlexbox>
-        <Typography sx={{ color: "#9AA6BC", fontSize: "13px", textAlign: "center", mt: 3 }}>
+        <Typography sx={{ color: "#b3aca2", fontSize: "13px", textAlign: "center", mt: 3 }}>
           Figures above are placeholders — replace with real numbers.
         </Typography>
       </Container>

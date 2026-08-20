@@ -10,8 +10,8 @@ const Frame = styled(Box)(({ theme }) => ({
   width: "100%",
   minHeight: 200,
   borderRadius: "10px",
-  border: "2px dashed #C7CEDA",
-  backgroundColor: "#F5FAFE",
+  border: "2px dashed #24354e",
+  backgroundColor: "#1b1d1e",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -24,10 +24,10 @@ const Frame = styled(Box)(({ theme }) => ({
 const ImagePlaceholder = ({ label, minHeight = 200, sx }) => {
   return (
     <Frame sx={{ minHeight, ...sx }}>
-      <ImageOutlinedIcon sx={{ fontSize: 36, color: "#9AA6BC" }} />
+      <ImageOutlinedIcon sx={{ fontSize: 36, color: "#b3aca2" }} />
       <Typography
         variant="body2"
-        sx={{ color: "#7D8894", fontWeight: "500", fontSize: "13px" }}
+        sx={{ color: "#9d9588", fontWeight: "500", fontSize: "13px" }}
       >
         {label || "Image placeholder"}
       </Typography>

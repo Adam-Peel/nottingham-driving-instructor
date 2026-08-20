@@ -34,13 +34,13 @@ const Credentials = () => {
     <Box sx={{ mt: 10 }}>
       <CustomContainer>
         <CustomBox>
-          <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#000339" }}>
+          <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
             DriveWell Nottingham
           </Typography>
           <Typography
             variant="body2"
             sx={{
-              color: "#7D8589",
+              color: "#9a9184",
               fontSize: "16px",
               fontWeight: "bold",
               mt: 2,
@@ -53,13 +53,13 @@ const Credentials = () => {
         <Box>
           <Box sx={{ display: "flex", gap: "4px" }}>
             {Array.from({ length: 5 }).map((_, index) => (
-              <StarIcon key={index} sx={{ color: "#FFC107" }} />
+              <StarIcon key={index} sx={{ color: "#ffc71e" }} />
             ))}
           </Box>
           <Typography
             variant="body2"
             sx={{
-              color: "#7D8589",
+              color: "#9a9184",
               fontSize: "16px",
               fontWeight: "bold",
               mt: 2,
@@ -84,12 +84,12 @@ const Credentials = () => {
             icon={badge.icon}
             label={badge.label}
             sx={{
-              backgroundColor: "#F5FAFE",
-              color: "#17275F",
+              backgroundColor: "#1b1d1e",
+              color: "#9dbee7",
               fontWeight: "600",
               fontSize: "14px",
               padding: "18px 8px",
-              "& .MuiChip-icon": { color: "#17275F" },
+              "& .MuiChip-icon": { color: "#9dbee7" },
             }}
           />
         ))}

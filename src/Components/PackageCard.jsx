@@ -10,9 +10,9 @@ const PackageCard = ({ title, price, hours, transmission, includes, popular }) =
     overflow: "hidden",
     maxWidth: 350,
     width: "100%",
-    backgroundColor: "#fff",
-    boxShadow: popular ? "0 8px 24px rgba(23, 39, 95, 0.15)" : "none",
-    border: popular ? "2px solid #17275F" : "2px solid transparent",
+    backgroundColor: "#181a1b",
+    boxShadow: popular ? "0 8px 24px rgba(18, 31, 76, 0.15)" : "none",
+    border: popular ? "2px solid #2b49b1" : "2px solid transparent",
     position: "relative",
     [theme.breakpoints.down("md")]: {
       maxWidth: 400,
@@ -35,8 +35,8 @@ const PackageCard = ({ title, price, hours, transmission, includes, popular }) =
             position: "absolute",
             top: 12,
             right: 12,
-            backgroundColor: "#17275F",
-            color: "#fff",
+            backgroundColor: "#121f4c",
+            color: "#e8e6e3",
             fontWeight: "700",
           }}
         />
@@ -45,29 +45,29 @@ const PackageCard = ({ title, price, hours, transmission, includes, popular }) =
       <ImagePlaceholder label="Photo: pupil driving lesson" minHeight={180} sx={{ borderRadius: 0, border: "none" }} />
 
       <Box sx={{ padding: "1.25rem" }}>
-        <Typography variant="body2" sx={{ fontWeight: "700", fontSize: "20px", color: "#000339" }}>
+        <Typography variant="body2" sx={{ fontWeight: "700", fontSize: "20px", color: "#d6d2cd" }}>
           {title}
         </Typography>
-        <Typography variant="body2" sx={{ fontWeight: "800", fontSize: "28px", color: "#17275F", my: 1 }}>
+        <Typography variant="body2" sx={{ fontWeight: "800", fontSize: "28px", color: "#9dbee7", my: 1 }}>
           £{price}
         </Typography>
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: "8px", mt: 2 }}>
           <InfoRow>
-            <AccessTimeIcon sx={{ fontSize: 18, color: "#7D8589" }} />
-            <Typography variant="body2" sx={{ color: "#5A6473" }}>
+            <AccessTimeIcon sx={{ fontSize: 18, color: "#9a9184" }} />
+            <Typography variant="body2" sx={{ color: "#a7a094" }}>
               {hours} hours of tuition
             </Typography>
           </InfoRow>
           <InfoRow>
-            <SettingsIcon sx={{ fontSize: 18, color: "#7D8589" }} />
-            <Typography variant="body2" sx={{ color: "#5A6473" }}>
+            <SettingsIcon sx={{ fontSize: 18, color: "#9a9184" }} />
+            <Typography variant="body2" sx={{ color: "#a7a094" }}>
               {transmission}
             </Typography>
           </InfoRow>
           <InfoRow>
-            <CheckCircleIcon sx={{ fontSize: 18, color: "#7D8589" }} />
-            <Typography variant="body2" sx={{ color: "#5A6473" }}>
+            <CheckCircleIcon sx={{ fontSize: 18, color: "#9a9184" }} />
+            <Typography variant="body2" sx={{ color: "#a7a094" }}>
               {includes}
             </Typography>
           </InfoRow>

@@ -70,11 +70,11 @@ export const Navbar = () => {
 
   const NavLink = styled(Typography)(() => ({
     fontSize: "14px",
-    color: "#4F5361",
+    color: "#b0aa9f",
     fontWeight: "bold",
     cursor: "pointer",
     "&:hover": {
-      color: "#17275F",
+      color: "#9dbee7",
     },
   }));
 
@@ -121,14 +121,14 @@ export const Navbar = () => {
     width: 36,
     height: 36,
     borderRadius: "6px",
-    border: "2px solid #17275F",
-    backgroundColor: "#fff",
+    border: "2px solid #2b49b1",
+    backgroundColor: "#181a1b",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontWeight: "800",
     fontSize: "18px",
-    color: "#D8232A",
+    color: "#df3c42",
   }));
 
   return (
@@ -152,7 +152,7 @@ export const Navbar = () => {
           </Drawer>
           <LogoMark>
             <LPlate>L</LPlate>
-            <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#000339" }}>
+            <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
               DriveWell Nottingham
             </Typography>
           </LogoMark>
@@ -185,12 +185,12 @@ export const Navbar = () => {
             textDecoration: "none",
           }}
         >
-          <CallIcon sx={{ fontSize: 18, color: "#17275F" }} />
+          <CallIcon sx={{ fontSize: 18, color: "#9dbee7" }} />
           <NavLink variant="body2">{PHONE_DISPLAY}</NavLink>
         </Box>
         <CustomButton
-          backgroundColor="#17275F"
-          color="#fff"
+          backgroundColor="#121f4c"
+          color="#e8e6e3"
           buttonText="Book a Lesson"
         />
       </Box>

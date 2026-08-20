@@ -81,14 +81,14 @@ const Guide = () => {
         style={{
           width: "5%",
           height: "5px",
-          backgroundColor: "#000339",
+          backgroundColor: "#00022e",
           margin: "0 auto",
         }}
       ></div>
 
       <Typography
         variant="h3"
-        sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 3 }}
+        sx={{ fontSize: "35px", fontWeight: "bold", color: "#d6d2cd", my: 3 }}
       >
         How it works
       </Typography>
@@ -99,7 +99,7 @@ const Guide = () => {
           sx={{
             fontSize: "16px",
             fontWeight: "500",
-            color: "#5A6473",
+            color: "#a7a094",
             textAlign: "center",
           }}
         >
@@ -112,13 +112,13 @@ const Guide = () => {
           const Icon = step.icon;
           return (
             <GuideBox key={step.title}>
-              <Icon sx={{ fontSize: 40, color: "#0689FF" }} />
+              <Icon sx={{ fontSize: 40, color: "#1e9cff" }} />
               <Typography
                 variant="body2"
                 sx={{
                   fontWeight: "500",
                   fontSize: "20px",
-                  color: "#3B3c45",
+                  color: "#c0bab2",
                   my: 1,
                 }}
               >
@@ -134,11 +134,11 @@ const Guide = () => {
               >
                 <Typography
                   variant="body2"
-                  sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
+                  sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff" }}
                 >
                   {step.tag}
                 </Typography>
-                <ArrowRightAltIcon style={{ color: "#0689FF" }} />
+                <ArrowRightAltIcon style={{ color: "#1e9cff" }} />
               </Box>
             </GuideBox>
           );
@@ -146,8 +146,8 @@ const Guide = () => {
       </GuidesBox>
 
       <CustomButton
-        backgroundColor="#17275F"
-        color="#fff"
+        backgroundColor="#121f4c"
+        color="#e8e6e3"
         buttonText="See Full Services"
         guideBtn={true}
       />

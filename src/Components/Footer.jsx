@@ -28,17 +28,17 @@ const Footer = () => {
 
   const FooterLink = styled("span")(() => ({
     fontSize: "16px",
-    color: "#7A7A7E",
+    color: "#9a9184",
     fontWeight: "300",
     cursor: "pointer",
     "&:hover": {
-      color: "#000",
+      color: "#e8e6e3",
     },
   }));
 
   const ColumnHeading = styled(Typography)(() => ({
     fontSize: "20px",
-    color: "#1C1C1D",
+    color: "#d6d2cd",
     fontWeight: "700",
     marginBottom: "16px",
   }));
@@ -83,10 +83,10 @@ const Footer = () => {
         <Box>
           <ColumnHeading>Get in touch</ColumnHeading>
 
-          <Typography sx={{ fontSize: "16px", color: "#7A7A7E", fontWeight: "500", mb: 1 }}>
+          <Typography sx={{ fontSize: "16px", color: "#9a9184", fontWeight: "500", mb: 1 }}>
             {PHONE_DISPLAY}
           </Typography>
-          <Typography sx={{ fontSize: "16px", color: "#7A7A7E", fontWeight: "500", mb: 2 }}>
+          <Typography sx={{ fontSize: "16px", color: "#9a9184", fontWeight: "500", mb: 2 }}>
             {EMAIL}
           </Typography>
 
@@ -97,18 +97,18 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook page"
-              sx={{ display: "flex", color: "#7A7A7E", "&:hover": { color: "#1877F2" } }}
+              sx={{ display: "flex", color: "#9a9184", "&:hover": { color: "#2d96f3" } }}
             >
               <FacebookIcon sx={{ cursor: "pointer" }} />
             </Box>
-            <InstagramIcon sx={{ cursor: "pointer", color: "#7A7A7E" }} />
+            <InstagramIcon sx={{ cursor: "pointer", color: "#9a9184" }} />
             <Box
               component="a"
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Message on WhatsApp"
-              sx={{ display: "flex", color: "#7A7A7E", "&:hover": { color: "#25D366" } }}
+              sx={{ display: "flex", color: "#9a9184", "&:hover": { color: "#40dd7b" } }}
             >
               <WhatsAppIcon sx={{ cursor: "pointer" }} />
             </Box>
@@ -119,7 +119,7 @@ const Footer = () => {
       <Typography
         sx={{
           textAlign: "center",
-          color: "#9AA6BC",
+          color: "#b3aca2",
           fontSize: "13px",
           mt: 8,
         }}

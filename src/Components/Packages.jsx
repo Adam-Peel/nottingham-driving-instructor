@@ -22,13 +22,13 @@ const Packages = () => {
   }));
 
   return (
-    <Box sx={{ mt: 5, backgroundColor: "#F5FAFE", py: 10 }} id="pricing">
+    <Box sx={{ mt: 5, backgroundColor: "#1b1d1e", py: 10 }} id="pricing">
       <Container>
         <PackagesTextBox>
-          <Typography sx={{ color: "#000339", fontSize: "35px", fontWeight: "bold" }}>
+          <Typography sx={{ color: "#d6d2cd", fontSize: "35px", fontWeight: "bold" }}>
             Lesson Packages
           </Typography>
-          <Typography sx={{ color: "#5A6473", fontSize: "16px", mt: 1 }}>
+          <Typography sx={{ color: "#a7a094", fontSize: "16px", mt: 1 }}>
             Standard rate is £45 per hour — pay-as-you-go lessons also
             available, or pick a package below.
           </Typography>

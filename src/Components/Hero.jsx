@@ -19,7 +19,7 @@ const Hero = () => {
 
   const Title = styled(Typography)(({ theme }) => ({
     fontSize: "40px",
-    color: "#000336",
+    color: "#d7d3ce",
     fontWeight: "bold",
     margin: theme.spacing(4, 0, 4, 0),
     [theme.breakpoints.down("sm")]: {
@@ -28,7 +28,7 @@ const Hero = () => {
   }));
 
   return (
-    <Box sx={{ backgroundColor: "#E6F0FF", minHeight: "80vh" }}>
+    <Box sx={{ backgroundColor: "#1f2223", minHeight: "80vh" }}>
       <Container>
         <Navbar />
         <CustomBox>
@@ -37,7 +37,7 @@ const Hero = () => {
               variant="body2"
               sx={{
                 fontSize: "18px",
-                color: "#687690",
+                color: "#9a9184",
                 fontWeight: "500",
                 mb: 4,
               }}
@@ -49,15 +49,15 @@ const Hero = () => {
             </Title>
             <Typography
               variant="body2"
-              sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}
+              sx={{ fontSize: "18px", color: "#a7a094", my: 4 }}
             >
               DVSA approved manual driving lessons for beginners, nervous
               drivers and test-ready learners, at £45 per hour. Pick-ups
               across {PICKUP_AREAS.join(", ")}, at a pace that suits you.
             </Typography>
             <CustomButton
-              backgroundColor="#17275F"
-              color="#fff"
+              backgroundColor="#121f4c"
+              color="#e8e6e3"
               buttonText="Book Your First Lesson"
               heroBtn={true}
             />
