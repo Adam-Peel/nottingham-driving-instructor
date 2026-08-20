@@ -66,7 +66,7 @@ const Hero = () => {
           <Box sx={{ flex: "1.25" }}>
             <Box
               component="img"
-              src="/cover.jpg"
+              src={`${import.meta.env.BASE_URL}cover.jpg`}
               alt="Nick's driving school car parked on a Nottinghamshire road"
               sx={{
                 width: "100%",

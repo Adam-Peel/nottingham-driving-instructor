@@ -73,7 +73,7 @@ const About = () => {
           <ImgContainer>
             <Box
               component="img"
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Nick Goodchild standing with his driving school car"
               sx={{
                 width: "100%",
