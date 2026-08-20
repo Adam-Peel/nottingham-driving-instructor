@@ -4,8 +4,6 @@ import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 import SignpostIcon from "@mui/icons-material/Signpost";
 import QuizIcon from "@mui/icons-material/Quiz";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import CustomButton from "./CustomButton";
 
 const STEPS = [
   {
@@ -124,33 +122,16 @@ const Guide = () => {
               >
                 {step.title}
               </Typography>
-              <Box
-                sx={{
-                  cursor: "pointer",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+              <Typography
+                variant="body2"
+                sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", textAlign: "center" }}
               >
-                <Typography
-                  variant="body2"
-                  sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff" }}
-                >
-                  {step.tag}
-                </Typography>
-                <ArrowRightAltIcon style={{ color: "#1e9cff" }} />
-              </Box>
+                {step.tag}
+              </Typography>
             </GuideBox>
           );
         })}
       </GuidesBox>
-
-      <CustomButton
-        backgroundColor="#121f4c"
-        color="#e8e6e3"
-        buttonText="See Full Services"
-        guideBtn={true}
-      />
     </Box>
   );
 };

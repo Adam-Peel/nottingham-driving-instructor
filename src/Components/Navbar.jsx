@@ -153,7 +153,7 @@ export const Navbar = () => {
           <LogoMark>
             <LPlate>L</LPlate>
             <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
-              DriveWell Nottingham
+              Nick Goodchild ADI
             </Typography>
           </LogoMark>
         </Box>

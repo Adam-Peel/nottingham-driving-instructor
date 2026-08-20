@@ -26,7 +26,7 @@ export const packages = [
     price: String(HOURLY_RATE * 20),
     hours: 20,
     transmission: "Manual",
-    includes: "Test day booking support",
+    includes: "2 mock tests included",
     popular: false,
   },
 ];

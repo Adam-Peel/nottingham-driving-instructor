@@ -42,7 +42,7 @@ const Hero = () => {
                 mb: 4,
               }}
             >
-              Welcome to DriveWell Nottingham
+              Welcome to Nick Goodchild ADI
             </Typography>
             <Title variant="h1">
               Learn to drive with confidence, right here in Nottingham.

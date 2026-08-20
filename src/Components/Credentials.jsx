@@ -35,7 +35,7 @@ const Credentials = () => {
       <CustomContainer>
         <CustomBox>
           <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
-            DriveWell Nottingham
+            Nick Goodchild ADI
           </Typography>
           <Typography
             variant="body2"
@@ -46,7 +46,7 @@ const Credentials = () => {
               mt: 2,
             }}
           >
-            See what our pupils say about us:
+            See what people say about Nick:
           </Typography>
         </CustomBox>
 

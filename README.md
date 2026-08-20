@@ -1,4 +1,4 @@
-# DriveWell Nottingham (demo template)
+# Nick Goodchild ADI (demo template)
 
 A single-page site template for a Nottingham-based driving instructor, adapted
 from a React + Vite + MUI boilerplate originally built for an estate agent.
@@ -20,7 +20,8 @@ npm run preview  # preview the production build
 Real details already in place, all centralised in `src/data/contact.js`
 and `src/data/packages.js`:
 
-- Instructor name (Nick Goodchild) and two real photos of him with his car
+- Business name (Nick Goodchild ADI) and instructor name, plus two real
+  photos of him with his car
   (`public/profile.jpg` in `About.jsx`, `public/cover.jpg` in `Hero.jsx`).
 - Base rate (£45/hour, manual only) and package prices derived from it.
 - Phone (`07554 121250`), email (`nickgoodchildadi@gmail.com`), WhatsApp
@@ -37,8 +38,8 @@ exist.
 
 Still placeholder/fake, worth fixing before this goes live:
 
-- **Business/brand name** — "DriveWell Nottingham" everywhere (`Navbar.jsx`,
-  `Credentials.jsx`, `Footer.jsx`, `index.html` title, `favicon.svg`).
+- **Favicon** — still the generic "L" plate SVG (`favicon.svg`), not branded
+  to Nick specifically.
 - **Contact form backend** — `Contact.jsx` only confirms client-side right
   now; nothing is actually sent anywhere. Wire it up to something like
   EmailJS, Formspree, or a small API route before this goes live.
@@ -58,10 +59,10 @@ src/
 ```
 
 Sections, top to bottom: `Hero` → `Credentials` (trust badges/reviews) →
-`Guide` (how it works) → `Packages` (pricing cards) → `About` (instructor
-bio + stats) → `FAQ` (expandable common questions) → `GetStarted` (CTA
-banner) → `Contact` (contact form) → `Footer`. A floating `WhatsAppButton`
-renders on top of every page.
+`Guide` (how it works) → `Packages` (pricing cards + taster session banner)
+→ `About` (instructor bio + stats) → `FAQ` (expandable common questions) →
+`Contact` (contact form) → `Footer`. A floating `WhatsAppButton` renders on
+top of every page.
 
 Layout and responsiveness (mobile drawer nav, breakpoints, etc.) all carry
 over from the original MUI-based template, so the site works across phone,

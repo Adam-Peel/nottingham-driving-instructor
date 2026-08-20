@@ -1,13 +1,6 @@
 import { Button, styled } from "@mui/material";
 
-const CustomButton = ({
-  backgroundColor,
-  color,
-  buttonText,
-  heroBtn,
-  guideBtn,
-  getStartedBtn,
-}) => {
+const CustomButton = ({ backgroundColor, color, buttonText, heroBtn }) => {
   const StyledButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
     color: color,
@@ -25,12 +18,8 @@ const CustomButton = ({
       borderColor: backgroundColor,
     },
     [theme.breakpoints.down("md")]: {
-      margin: (heroBtn || getStartedBtn) && theme.spacing(0, "auto", 3, "auto"),
-      width: (heroBtn || getStartedBtn) && "90%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginTop: guideBtn && theme.spacing(3),
-      width: guideBtn && "90%",
+      margin: heroBtn && theme.spacing(0, "auto", 3, "auto"),
+      width: heroBtn && "90%",
     },
   }));
 

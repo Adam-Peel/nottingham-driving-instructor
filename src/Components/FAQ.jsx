@@ -31,7 +31,7 @@ const FAQS = [
   {
     question: "Do you offer intensive courses?",
     answer:
-      "Yes — the Intensive Course package bundles 20 hours of tuition with test day booking support for learners working towards a test date.",
+      "Yes — the Intensive Course package bundles 20 hours of tuition with 2 mock tests included for learners working towards a test date.",
   },
   {
     question: "What's the cancellation policy?",

@@ -124,7 +124,7 @@ const Footer = () => {
           mt: 8,
         }}
       >
-        © 2026 DriveWell Nottingham. All rights reserved. — placeholder
+        © 2026 Nick Goodchild ADI. All rights reserved. — placeholder
         business name.
       </Typography>
     </Box>
