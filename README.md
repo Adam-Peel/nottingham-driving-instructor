@@ -2,9 +2,8 @@
 
 A single-page site template for a Nottingham-based driving instructor, adapted
 from a React + Vite + MUI boilerplate originally built for an estate agent.
-Everything here — business name, copy, prices, stats, contact details — is
-placeholder content meant to show what a finished site could look like. None
-of it is real.
+Business details, pricing and contact info are filled in — see "Still to do"
+below for what's left before this goes live.
 
 ## Running it
 
@@ -15,28 +14,7 @@ npm run build    # production build to dist/
 npm run preview  # preview the production build
 ```
 
-## What's real vs. still a placeholder
-
-Real details already in place, all centralised in `src/data/contact.js`
-and `src/data/packages.js`:
-
-- Business name (Nick Goodchild ADI) and instructor name, plus two real
-  photos of him with his car
-  (`public/profile.jpg` in `About.jsx`, `public/cover.jpg` in `Hero.jsx`).
-- Base rate (£45/hour, manual only) and package prices derived from it.
-- Phone (`07554 121250`), email (`nickgoodchildadi@gmail.com`), WhatsApp
-  number and Facebook page link.
-- Pick-up areas (West Bridgford, Colwick, Bingham, Sneinton, Netherfield,
-  Carlton, Gedling) plus the wider villages also covered (Aslockton, Newton,
-  Radcliffe on Trent, Lowdham, Belvoir, Cotgrave, Bottesford, East Bridgford,
-  Whatton) — used in `Hero.jsx` and the FAQ.
-
-Package-card photos still use the `ImagePlaceholder` component (a dashed box
-with a label, e.g. "Photo: pupil driving lesson") since we only have the two
-photos above so far — swap those for real `<img>` tags once more photos
-exist.
-
-Still placeholder/fake, worth fixing before this goes live:
+## Still to do
 
 - **Favicon** — still the generic "L" plate SVG (`favicon.svg`), not branded
   to Nick specifically.
