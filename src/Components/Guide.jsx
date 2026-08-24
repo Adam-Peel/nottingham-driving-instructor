@@ -4,32 +4,67 @@ import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 import SignpostIcon from "@mui/icons-material/Signpost";
 import QuizIcon from "@mui/icons-material/Quiz";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const STEPS = [
   {
     icon: PhoneInTalkIcon,
     title: "Get in Touch",
     tag: "Free chat about your goals",
+    points: [
+      "Quick chat about your experience so far and what you want from lessons",
+      "Agree a regular day, time and pick-up point",
+      "Manual, dual-control car — the same one you'd take your test in",
+      "No pressure — a single taster lesson is fine if you're not ready to commit",
+    ],
   },
   {
     icon: DirectionsCarFilledIcon,
     title: "Beginner Lessons",
     tag: "Master the basics",
+    points: [
+      "Cockpit checks and getting comfortable with the controls",
+      "Clutch control — moving off and stopping smoothly",
+      "Changing up and down through the gears",
+      "Steering, road positioning and observation",
+      "Turning at junctions, left and right",
+    ],
   },
   {
     icon: SignpostIcon,
     title: "Building Confidence",
     tag: "Roundabouts & dual carriageways",
+    points: [
+      "Roundabouts, from mini to multi-lane",
+      "Dual carriageways and higher-speed roads",
+      "Meeting traffic and lane discipline",
+      "Reversing manoeuvres — bay parking, parallel park, pulling up on the right",
+      "Reading hazards and anticipating other road users",
+    ],
   },
   {
     icon: QuizIcon,
     title: "Mock Tests",
     tag: "Practice real test routes",
+    points: [
+      "Full mock test run on a real DVSA test route",
+      "Independent driving — following directions or a sat nav",
+      "\"Show me, tell me\" vehicle safety questions",
+      "Honest feedback on faults to iron out before test day",
+      "Building a calm, consistent test-day routine",
+    ],
   },
   {
     icon: EmojiEventsIcon,
     title: "Pass & Beyond",
     tag: "Pass Plus & motorway lessons",
+    points: [
+      "What to expect on the day, from arrival to result",
+      "Pass Plus course for newly qualified drivers",
+      "Motorway driving lessons, once you've passed",
+      "Confidence-building drives after the test",
+      "Top-up lessons any time you want a refresher",
+    ],
   },
 ];
 
@@ -41,29 +76,30 @@ const Guide = () => {
     },
   }));
 
-  const GuidesBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    justifyContent: "space-around",
-    width: "70%",
+  const GuidesGrid = styled(Box)(({ theme }) => ({
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: theme.spacing(3),
+    width: "90%",
+    maxWidth: "1200px",
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginBottom: "0",
-      flexDirection: "column",
-    },
+    marginBottom: theme.spacing(2),
   }));
 
-  const GuideBox = styled(Box)(({ theme }) => ({
+  const StepCard = styled(Box)(() => ({
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    marginTop: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(2, 0, 2, 0),
-    },
+    padding: "24px",
+    borderRadius: "10px",
+    border: "1px solid #24354e",
+    backgroundColor: "#181a1b",
+  }));
+
+  const PointRow = styled(Box)(() => ({
+    display: "flex",
+    alignItems: "flex-start",
+    gap: "8px",
+    marginTop: "10px",
   }));
 
   return (
@@ -74,6 +110,7 @@ const Guide = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        py: 5,
       }}
     >
       <div
@@ -106,33 +143,44 @@ const Guide = () => {
         </Typography>
       </CustomBox>
 
-      <GuidesBox>
+      <GuidesGrid>
         {STEPS.map((step) => {
           const Icon = step.icon;
           return (
-            <GuideBox key={step.title}>
-              <Icon sx={{ fontSize: 40, color: "#1e9cff" }} />
+            <StepCard key={step.title}>
+              <Icon sx={{ fontSize: 36, color: "#1e9cff" }} />
               <Typography
                 variant="body2"
                 sx={{
                   fontWeight: "500",
                   fontSize: "20px",
                   color: "#c0bab2",
-                  my: 1,
+                  mt: 1.5,
                 }}
               >
                 {step.title}
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", textAlign: "center" }}
+                sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", mt: 0.5 }}
               >
                 {step.tag}
               </Typography>
-            </GuideBox>
+
+              <Box sx={{ mt: 1 }}>
+                {step.points.map((point) => (
+                  <PointRow key={point}>
+                    <CheckCircleIcon sx={{ fontSize: 16, color: "#6c7a8f", mt: "3px", flexShrink: 0 }} />
+                    <Typography variant="body2" sx={{ color: "#a7a094", fontSize: "14.5px", lineHeight: "22px" }}>
+                      {point}
+                    </Typography>
+                  </PointRow>
+                ))}
+              </Box>
+            </StepCard>
           );
         })}
-      </GuidesBox>
+      </GuidesGrid>
     </Box>
   );
 };
