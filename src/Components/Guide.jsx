@@ -50,7 +50,7 @@ const STEPS = [
     points: [
       "Full mock test run on a real DVSA test route",
       "Independent driving — following directions or a sat nav",
-      "\"Show me, tell me\" vehicle safety questions",
+      '"Show me, tell me" vehicle safety questions',
       "Honest feedback on faults to iron out before test day",
       "Building a calm, consistent test-day routine",
     ],
@@ -58,7 +58,7 @@ const STEPS = [
   {
     icon: EmojiEventsIcon,
     title: "Pass & Beyond",
-    tag: "Pass Plus & motorway lessons",
+    tag: "Pass and pass plus",
     points: [
       "What to expect on the day, from arrival to result",
       "Pass Plus course for newly qualified drivers",
@@ -183,10 +183,21 @@ const Guide = () => {
         <IntroHeading>
           <PhoneInTalkIcon sx={{ fontSize: 36, color: "#1e9cff" }} />
           <Box>
-            <Typography variant="body2" sx={{ fontWeight: "500", fontSize: "20px", color: "#c0bab2" }}>
+            <Typography
+              variant="body2"
+              sx={{ fontWeight: "500", fontSize: "20px", color: "#c0bab2" }}
+            >
               {INTRO_STEP.title}
             </Typography>
-            <Typography variant="body2" sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", mt: 0.5 }}>
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "14px",
+                color: "#1e9cff",
+                mt: 0.5,
+              }}
+            >
               {INTRO_STEP.tag}
             </Typography>
           </Box>
@@ -195,8 +206,22 @@ const Guide = () => {
         <IntroPoints>
           {INTRO_STEP.points.map((point) => (
             <PointRow key={point} sx={{ mt: 0, flex: "1 1 260px" }}>
-              <CheckCircleIcon sx={{ fontSize: 16, color: "#6c7a8f", mt: "3px", flexShrink: 0 }} />
-              <Typography variant="body2" sx={{ color: "#a7a094", fontSize: "14.5px", lineHeight: "22px" }}>
+              <CheckCircleIcon
+                sx={{
+                  fontSize: 16,
+                  color: "#6c7a8f",
+                  mt: "3px",
+                  flexShrink: 0,
+                }}
+              />
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "#a7a094",
+                  fontSize: "14.5px",
+                  lineHeight: "22px",
+                }}
+              >
                 {point}
               </Typography>
             </PointRow>
@@ -223,7 +248,12 @@ const Guide = () => {
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", mt: 0.5 }}
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: "14px",
+                  color: "#1e9cff",
+                  mt: 0.5,
+                }}
               >
                 {step.tag}
               </Typography>
@@ -231,8 +261,22 @@ const Guide = () => {
               <Box sx={{ mt: 1 }}>
                 {step.points.map((point) => (
                   <PointRow key={point}>
-                    <CheckCircleIcon sx={{ fontSize: 16, color: "#6c7a8f", mt: "3px", flexShrink: 0 }} />
-                    <Typography variant="body2" sx={{ color: "#a7a094", fontSize: "14.5px", lineHeight: "22px" }}>
+                    <CheckCircleIcon
+                      sx={{
+                        fontSize: 16,
+                        color: "#6c7a8f",
+                        mt: "3px",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "#a7a094",
+                        fontSize: "14.5px",
+                        lineHeight: "22px",
+                      }}
+                    >
                       {point}
                     </Typography>
                   </PointRow>
