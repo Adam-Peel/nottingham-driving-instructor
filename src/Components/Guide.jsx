@@ -62,7 +62,6 @@ const STEPS = [
     points: [
       "What to expect on the day, from arrival to result",
       "Pass Plus course for newly qualified drivers",
-      "Motorway driving lessons, once you've passed",
       "Confidence-building drives after the test",
       "Top-up lessons any time you want a refresher",
     ],

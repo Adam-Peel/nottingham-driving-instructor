@@ -1,6 +1,5 @@
 import Hero from "./Components/Hero";
 import Credentials from "./Components/Credentials";
-import FacebookFeed from "./Components/FacebookFeed";
 import Guide from "./Components/Guide";
 import Packages from "./Components/Packages";
 import About from "./Components/About";
@@ -14,7 +13,6 @@ function App() {
     <>
       <Hero />
       <Credentials />
-      <FacebookFeed />
       <Guide />
       <Packages />
       <About />
