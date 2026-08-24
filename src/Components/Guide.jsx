@@ -6,18 +6,19 @@ import QuizIcon from "@mui/icons-material/Quiz";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
+const INTRO_STEP = {
+  icon: PhoneInTalkIcon,
+  title: "Get in Touch",
+  tag: "Free chat about your goals",
+  points: [
+    "Quick chat about your experience so far and what you want from lessons",
+    "Agree a regular day, time and pick-up point",
+    "Manual, dual-control car — the same one you'd take your test in",
+    "No pressure — a single taster lesson is fine if you're not ready to commit",
+  ],
+};
+
 const STEPS = [
-  {
-    icon: PhoneInTalkIcon,
-    title: "Get in Touch",
-    tag: "Free chat about your goals",
-    points: [
-      "Quick chat about your experience so far and what you want from lessons",
-      "Agree a regular day, time and pick-up point",
-      "Manual, dual-control car — the same one you'd take your test in",
-      "No pressure — a single taster lesson is fine if you're not ready to commit",
-    ],
-  },
   {
     icon: DirectionsCarFilledIcon,
     title: "Beginner Lessons",
@@ -95,6 +96,42 @@ const Guide = () => {
     backgroundColor: "#181a1b",
   }));
 
+  const IntroBanner = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "flex-start",
+    gap: theme.spacing(4),
+    width: "90%",
+    maxWidth: "1200px",
+    marginTop: theme.spacing(5),
+    padding: "24px 32px",
+    borderRadius: "10px",
+    border: "1px solid #24354e",
+    backgroundColor: "#181a1b",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      gap: theme.spacing(2),
+    },
+  }));
+
+  const IntroHeading = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    gap: theme.spacing(1.5),
+    flex: "0 0 auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  }));
+
+  const IntroPoints = styled(Box)(({ theme }) => ({
+    display: "flex",
+    flexWrap: "wrap",
+    columnGap: theme.spacing(4),
+    rowGap: theme.spacing(1.5),
+    flex: 1,
+    alignSelf: "center",
+  }));
+
   const PointRow = styled(Box)(() => ({
     display: "flex",
     alignItems: "flex-start",
@@ -142,6 +179,31 @@ const Guide = () => {
           Your journey from first lesson to first solo drive, step by step
         </Typography>
       </CustomBox>
+
+      <IntroBanner>
+        <IntroHeading>
+          <PhoneInTalkIcon sx={{ fontSize: 36, color: "#1e9cff" }} />
+          <Box>
+            <Typography variant="body2" sx={{ fontWeight: "500", fontSize: "20px", color: "#c0bab2" }}>
+              {INTRO_STEP.title}
+            </Typography>
+            <Typography variant="body2" sx={{ fontWeight: "bold", fontSize: "14px", color: "#1e9cff", mt: 0.5 }}>
+              {INTRO_STEP.tag}
+            </Typography>
+          </Box>
+        </IntroHeading>
+
+        <IntroPoints>
+          {INTRO_STEP.points.map((point) => (
+            <PointRow key={point} sx={{ mt: 0, flex: "1 1 260px" }}>
+              <CheckCircleIcon sx={{ fontSize: 16, color: "#6c7a8f", mt: "3px", flexShrink: 0 }} />
+              <Typography variant="body2" sx={{ color: "#a7a094", fontSize: "14.5px", lineHeight: "22px" }}>
+                {point}
+              </Typography>
+            </PointRow>
+          ))}
+        </IntroPoints>
+      </IntroBanner>
 
       <GuidesGrid>
         {STEPS.map((step) => {
