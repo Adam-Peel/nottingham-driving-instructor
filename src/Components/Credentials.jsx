@@ -4,6 +4,8 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 import ShieldIcon from "@mui/icons-material/Shield";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import GoogleIcon from "@mui/icons-material/Google";
+import { FACEBOOK_URL, GOOGLE_BUSINESS_URL } from "../data/contact";
 
 const BADGES = [
   { label: "DVSA Approved Instructor (ADI)", icon: <VerifiedIcon /> },
@@ -31,7 +33,7 @@ const Credentials = () => {
   }));
 
   return (
-    <Box sx={{ mt: 10 }}>
+    <Box id="reviews" sx={{ mt: 10 }}>
       <CustomContainer>
         <CustomBox>
           <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
@@ -56,17 +58,43 @@ const Credentials = () => {
               <StarIcon key={index} sx={{ color: "#ffc71e" }} />
             ))}
           </Box>
-          <Typography
-            variant="body2"
+          <Box
+            component="a"
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
+              display: "block",
               color: "#9a9184",
               fontSize: "16px",
               fontWeight: "bold",
               mt: 2,
+              textDecoration: "none",
+              "&:hover": { color: "#e8e6e3" },
             }}
           >
-            5-Star Rating (150+ Reviews) — placeholder figure
-          </Typography>
+            Read Nick's reviews on Facebook (5 so far)
+          </Box>
+          <Box
+            component="a"
+            href={GOOGLE_BUSINESS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              color: "#9a9184",
+              fontSize: "14px",
+              fontWeight: "600",
+              mt: 1,
+              textDecoration: "none",
+              "&:hover": { color: "#e8e6e3" },
+            }}
+          >
+            <GoogleIcon sx={{ fontSize: 16 }} />
+            Find Nick on Google
+          </Box>
         </Box>
       </CustomContainer>
 

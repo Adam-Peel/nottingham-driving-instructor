@@ -1,6 +1,6 @@
 import { Button, styled } from "@mui/material";
 
-const CustomButton = ({ backgroundColor, color, buttonText, heroBtn }) => {
+const CustomButton = ({ backgroundColor, color, buttonText, heroBtn, href }) => {
   const StyledButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
     color: color,
@@ -23,7 +23,11 @@ const CustomButton = ({ backgroundColor, color, buttonText, heroBtn }) => {
     },
   }));
 
-  return <StyledButton>{buttonText}</StyledButton>;
+  return (
+    <StyledButton {...(href ? { component: "a", href } : {})}>
+      {buttonText}
+    </StyledButton>
+  );
 };
 
 export default CustomButton;

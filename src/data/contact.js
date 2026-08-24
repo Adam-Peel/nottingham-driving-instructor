@@ -4,6 +4,7 @@ export const PHONE_TEL = "+447554121250";
 export const EMAIL = "nickgoodchildadi@gmail.com";
 export const WHATSAPP_NUMBER = "447554121250";
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61586461006591";
+export const GOOGLE_BUSINESS_URL = "https://share.google/qjAGaJZ6kDjbRtHHg";
 
 // Core pick-up areas.
 export const PICKUP_AREAS = [

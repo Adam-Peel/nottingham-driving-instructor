@@ -1,9 +1,19 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { EMAIL, FACEBOOK_URL, PHONE_DISPLAY, WHATSAPP_NUMBER } from "../data/contact";
+import {
+  EMAIL,
+  FACEBOOK_URL,
+  GOOGLE_BUSINESS_URL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  WHATSAPP_NUMBER,
+} from "../data/contact";
+
+const HIGHWAY_CODE_URL = "https://www.gov.uk/guidance/the-highway-code";
+const THEORY_TEST_URL = "https://www.gov.uk/theory-test";
 
 const Footer = () => {
   const CustomContainer = styled(Container)(({ theme }) => ({
@@ -26,11 +36,13 @@ const Footer = () => {
     },
   }));
 
-  const FooterLink = styled("span")(() => ({
+  const FooterLink = styled("a")(() => ({
+    display: "inline-block",
     fontSize: "16px",
     color: "#9a9184",
     fontWeight: "300",
     cursor: "pointer",
+    textDecoration: "none",
     "&:hover": {
       color: "#e8e6e3",
     },
@@ -49,44 +61,72 @@ const Footer = () => {
         <Box>
           <ColumnHeading>Lessons</ColumnHeading>
 
-          <FooterLink>Beginner Lessons</FooterLink>
+          <FooterLink href="#lessons">Beginner Lessons</FooterLink>
           <br />
-          <FooterLink>Pass Plus</FooterLink>
+          <FooterLink href="#lessons">Pass Plus</FooterLink>
           <br />
-          <FooterLink>Intensive Courses</FooterLink>
+          <FooterLink href="#pricing">Intensive Courses</FooterLink>
           <br />
-          <FooterLink>Refresher Lessons</FooterLink>
+          <FooterLink href="#pricing">Refresher Lessons</FooterLink>
         </Box>
 
         <Box>
           <ColumnHeading>Resources</ColumnHeading>
 
-          <FooterLink>Theory Test Tips</FooterLink>
+          <FooterLink href={THEORY_TEST_URL} target="_blank" rel="noopener noreferrer">
+            Theory Test Tips
+          </FooterLink>
           <br />
-          <FooterLink>Highway Code</FooterLink>
+          <FooterLink href={HIGHWAY_CODE_URL} target="_blank" rel="noopener noreferrer">
+            Highway Code
+          </FooterLink>
           <br />
-          <FooterLink>Mock Test Booking</FooterLink>
+          <FooterLink href="#pricing">Mock Test Booking</FooterLink>
         </Box>
 
         <Box>
           <ColumnHeading>Company</ColumnHeading>
 
-          <FooterLink>About</FooterLink>
+          <FooterLink href="#about">About</FooterLink>
           <br />
-          <FooterLink>Reviews</FooterLink>
+          <FooterLink href="#reviews">Reviews</FooterLink>
           <br />
-          <FooterLink>Areas Covered</FooterLink>
+          <FooterLink href="#faq">Areas Covered</FooterLink>
           <br />
-          <FooterLink>Contact</FooterLink>
+          <FooterLink href="#contact">Contact</FooterLink>
         </Box>
 
         <Box>
           <ColumnHeading>Get in touch</ColumnHeading>
 
-          <Typography sx={{ fontSize: "16px", color: "#9a9184", fontWeight: "500", mb: 1 }}>
+          <Typography
+            component="a"
+            href={`tel:${PHONE_TEL}`}
+            sx={{
+              display: "block",
+              fontSize: "16px",
+              color: "#9a9184",
+              fontWeight: "500",
+              mb: 1,
+              textDecoration: "none",
+              "&:hover": { color: "#e8e6e3" },
+            }}
+          >
             {PHONE_DISPLAY}
           </Typography>
-          <Typography sx={{ fontSize: "16px", color: "#9a9184", fontWeight: "500", mb: 2 }}>
+          <Typography
+            component="a"
+            href={`mailto:${EMAIL}`}
+            sx={{
+              display: "block",
+              fontSize: "16px",
+              color: "#9a9184",
+              fontWeight: "500",
+              mb: 2,
+              textDecoration: "none",
+              "&:hover": { color: "#e8e6e3" },
+            }}
+          >
             {EMAIL}
           </Typography>
 
@@ -101,7 +141,16 @@ const Footer = () => {
             >
               <FacebookIcon sx={{ cursor: "pointer" }} />
             </Box>
-            <InstagramIcon sx={{ cursor: "pointer", color: "#9a9184" }} />
+            <Box
+              component="a"
+              href={GOOGLE_BUSINESS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Find us on Google"
+              sx={{ display: "flex", color: "#9a9184", "&:hover": { color: "#e8e6e3" } }}
+            >
+              <GoogleIcon sx={{ cursor: "pointer" }} />
+            </Box>
             <Box
               component="a"
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
@@ -124,8 +173,7 @@ const Footer = () => {
           mt: 8,
         }}
       >
-        © 2026 Nick Goodchild ADI. All rights reserved. — placeholder
-        business name.
+        © 2026 Nick Goodchild ADI. All rights reserved.
       </Typography>
     </Box>
   );

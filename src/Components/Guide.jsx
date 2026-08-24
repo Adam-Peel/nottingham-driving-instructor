@@ -68,6 +68,7 @@ const Guide = () => {
 
   return (
     <Box
+      id="lessons"
       sx={{
         display: "flex",
         flexDirection: "column",

@@ -16,17 +16,31 @@ npm run preview  # preview the production build
 
 ## Still to do
 
-- **Favicon** — still the generic "L" plate SVG (`favicon.svg`), not branded
-  to Nick specifically.
 - **Contact form backend** — `Contact.jsx` only confirms client-side right
   now; nothing is actually sent anywhere. Wire it up to something like
-  EmailJS, Formspree, or a small API route before this goes live.
+  EmailJS, Formspree, or a small API route before this goes live. This is
+  the one real remaining task — everything else below is quick.
+- **Favicon** — still the generic "L" plate SVG (`favicon.svg`), not branded
+  to Nick specifically.
 - **Stats** (lessons taught, pass rate, years' experience) — `About.jsx`.
-- **Review count / rating** — `Credentials.jsx`.
+- **Facebook review rating** — `Credentials.jsx` links to Nick's Facebook
+  reviews and states the real count (5), but doesn't claim a specific star
+  average since that wasn't confirmed — check the actual average and update
+  the copy/icons if it's not a flat 5.0.
 - **Credential badges** (ADI number, insurer, DBS) — `Credentials.jsx`, worth
   confirming exact wording with the instructor.
 - **Test centres** — `About.jsx` mentions Colwick and Chilwell test centres —
   check these match where Nick actually takes learners for tests.
+- **Instagram** — no account link supplied yet, so the icon was removed from
+  the footer rather than shipped dead. Add it back (`Footer.jsx`) if Nick
+  has one.
+
+Nav/footer link judgment calls worth a second look: "Test Prep" in the nav
+was swapped for "Reviews" (points at `#reviews`) since there wasn't a
+distinct test-prep section to link to; a few footer links ("Pass Plus",
+"Refresher Lessons", "Mock Test Booking", "Areas Covered") point at the
+closest relevant section rather than a dedicated one of their own, since
+those don't exist as separate content yet.
 
 ## Structure
 

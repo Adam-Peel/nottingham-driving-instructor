@@ -28,7 +28,7 @@ const Hero = () => {
   }));
 
   return (
-    <Box sx={{ backgroundColor: "#1f2223", minHeight: "80vh" }}>
+    <Box id="top" sx={{ backgroundColor: "#1f2223", minHeight: "80vh" }}>
       <Container>
         <Navbar />
         <CustomBox>
@@ -60,6 +60,7 @@ const Hero = () => {
               color="#e8e6e3"
               buttonText="Book Your First Lesson"
               heroBtn={true}
+              href="#contact"
             />
           </Box>
 

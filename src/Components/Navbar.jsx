@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import QuizIcon from "@mui/icons-material/Quiz";
+import StarIcon from "@mui/icons-material/Star";
 import InfoIcon from "@mui/icons-material/Info";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CallIcon from "@mui/icons-material/Call";
@@ -22,7 +22,15 @@ import {
 import { useState } from "react";
 import { PHONE_DISPLAY, PHONE_TEL } from "../data/contact";
 
-const NAV_LINKS = ["Home", "Lessons", "Pricing", "Test Prep", "About", "FAQ", "Contact"];
+const NAV_LINKS = [
+  { label: "Home", href: "#top", icon: HomeIcon },
+  { label: "Lessons", href: "#lessons", icon: DirectionsCarIcon },
+  { label: "Pricing", href: "#pricing", icon: LocalOfferIcon },
+  { label: "Reviews", href: "#reviews", icon: StarIcon },
+  { label: "About", href: "#about", icon: InfoIcon },
+  { label: "FAQ", href: "#faq", icon: HelpOutlineIcon },
+  { label: "Contact", href: "#contact", icon: CallIcon },
+];
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
@@ -48,22 +56,19 @@ export const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {NAV_LINKS.map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index === 0 && <HomeIcon />}
-                {index === 1 && <DirectionsCarIcon />}
-                {index === 2 && <LocalOfferIcon />}
-                {index === 3 && <QuizIcon />}
-                {index === 4 && <InfoIcon />}
-                {index === 5 && <HelpOutlineIcon />}
-                {index === 6 && <CallIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {NAV_LINKS.map((link) => {
+          const Icon = link.icon;
+          return (
+            <ListItem key={link.label} disablePadding>
+              <ListItemButton component="a" href={link.href}>
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                <ListItemText primary={link.label} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
     </Box>
   );
@@ -73,6 +78,7 @@ export const Navbar = () => {
     color: "#b0aa9f",
     fontWeight: "bold",
     cursor: "pointer",
+    textDecoration: "none",
     "&:hover": {
       color: "#9dbee7",
     },
@@ -112,6 +118,7 @@ export const Navbar = () => {
     alignItems: "center",
     gap: theme.spacing(1),
     cursor: "pointer",
+    textDecoration: "none",
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -150,7 +157,7 @@ export const Navbar = () => {
           >
             {list("left")}
           </Drawer>
-          <LogoMark>
+          <LogoMark component="a" href="#top">
             <LPlate>L</LPlate>
             <Typography sx={{ fontWeight: "800", fontSize: "18px", color: "#d6d2cd" }}>
               Nick Goodchild ADI
@@ -159,9 +166,9 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          {NAV_LINKS.map((text) => (
-            <NavLink key={text} variant="body2">
-              {text}
+          {NAV_LINKS.map(({ label, href }) => (
+            <NavLink key={label} component="a" href={href} variant="body2">
+              {label}
             </NavLink>
           ))}
         </NavbarLinksBox>
@@ -192,6 +199,7 @@ export const Navbar = () => {
           backgroundColor="#121f4c"
           color="#e8e6e3"
           buttonText="Book a Lesson"
+          href="#contact"
         />
       </Box>
     </NavbarContainer>
